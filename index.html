@@ -16,6 +16,19 @@
   <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
   <script type="text/javascript" src="js/jquery.particleground.js"></script>
   <script type="text/javascript" src="js/demo.js"></script>
+  <style>
+    body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+    <style>
 </head>
 
 <body class="dark-mode">
@@ -32,6 +45,13 @@
     &nbsp
   </div>
 </div>
+<button onclick="myFunction()" class="btn btn-info">Toggle dark mode</button>
 
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
 </body>
 </html>
