@@ -16,6 +16,29 @@
   <script type="text/javascript" src="js/demo.js"></script>
 
   <style>
+    @media only screen and (max-width: 900px) {
+    #resume {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+    }
+    body{
+      overflow: hidden;
+    }
+    }
+    @media only screen and (max-width: 512px) {
+      body{
+        position: absolute;
+        left: 52%;
+        top: 80%;
+        overflow: hidden;
+      }
+      #container {
+        left:33%;
+        overflow:hidden;
+      }
+      }
+
     body {
       padding: 25px;
       font-size: 25px;
@@ -23,6 +46,13 @@
       color: white;
       width: 100%;
       overflow: hidden;
+    }
+
+    #resume{
+      position: fixed;
+      top:20px;
+      right:20px;
+      justify-content:flex-end;
     }
 
     #container {
@@ -35,7 +65,31 @@
       justify-content: center;
     }
 
-    #profilePhoto {}
+    #intro {
+      position: relative;
+      left: 36%;
+      width: 350px;
+    }
+
+    #name {
+      width: 190px;
+      margin: 20px 20px 20px -4px;
+    }
+    
+    #jobTitle {
+      transform: translateX(175px);
+      width: 375px;
+      margin: 20px 20px 20px 0px;
+    }
+    .jobHeading{
+        font-family: 'Syncopate', sans-serif; 
+        font-weight: 500;
+    }
+
+    #horizontalLine {
+      width: 715px; 
+      position:relative;
+    }
 
     .dark-mode {
       background-color: white;
@@ -109,21 +163,29 @@ input:checked + .slider:before {
    width:10%;
    }    */
 
+  #socials {
+    transform: translateX(230px);
+  }
+
     #socialstuff {
       margin: auto;
       width: 100%;
     }
 
-    #intro {
-      position: relative;
-      left: 36%;
-      width: 350px;
+    i {
+      font-size: 2em;
     }
+
+    hr {
+      background-color: #E83951;
+      border-color: #E83951;
+    }
+
   </style>
 </head>
 
 <body>
-  <a style="position: fixed; top:20px; right:20px;justify-content:flex-end;"
+  <a id="resume"
     href="https://delzadbamji.github.io/Delzad_Bamji_Resume.pdf" class="btn btn-info" role="button">
     Download Resume
   </a>
@@ -135,28 +197,31 @@ input:checked + .slider:before {
             alt="if you see this, then your browser can't handle my photo. \n Pretend that it's here">
         </p>
         <p>
-        <h2 style="width: 190px;margin: 20px 20px 20px -4px;"><u>Delzad Bamji</u></h2>
+        <h2 id="name"><u>Delzad Bamji</u></h2>
         </p>
       </div>
     </div>
-    <div id="jobTitle" style="transform: translateX(175px);">
-      <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10; width: 375px;margin: 20px 20px 20px 0px;">
+    <div id="jobTitle">
+      <h2 class="jobHeading">
         Software / Web Developer
       </h2>
     </div>
     <div id="horizontalLine">
-      <hr style="width: 720px; position:relative; background-color: #E83951; border-color: #E83951;">
+      <hr>
     </div>
-    <div id="socials" style="transform: translateX(230px);">
+    <div id="socials">
       <p id=socialstuff>
-        <a href="https://www.linkedin.com/in/delzad-bamji/" style="color: white;margin-right:45px;"><i
-            class="fab fa-linkedin" style="font-size: 2em;"></i></a>
+        <a href="https://www.linkedin.com/in/delzad-bamji/" style="color: white;margin-right:45px;">
+          <i class="fab fa-linkedin"></i>
+        </a>
         &nbsp
-        <a href="https://www.facebook.com/delzad.bamji" style="color: white; margin-right:45px;"><i
-            class="fab fa-facebook" style="font-size: 2em;"></i></a>
+        <a href="https://www.facebook.com/delzad.bamji" style="color: white; margin-right:45px;">
+          <i class="fab fa-facebook"></i>
+        </a>
         &nbsp
-        <a href="https://github.com/delzadbamji/" style="color: white;"><i class="fab fa-github"
-            style="font-size: 2em;"></i></a>
+        <a href="https://github.com/delzadbamji/" style="color: white;">
+          <i class="fab fa-github"></i>
+        </a>
         &nbsp
       </p>
     </div>
@@ -168,7 +233,7 @@ input:checked + .slider:before {
       <span class="slider round"></span>
     </label>
         </div> -->
-  <!--  <button  float=left>Toggle dark mode</button> -->
+   <!-- <button  float=left>Toggle dark mode</button> -->
 
   <script>
     function myFunction() {
