@@ -5,15 +5,13 @@
   <meta charset="UTF-8" />
   <title>Homepage of Delzad Bamji</title>
   <!--this is the dark mode and misc stuff -->
-  <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
     integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"
     type="text/css">
-  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-  <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
+  <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
 
   <style>
     @media only screen and (max-width: 900px) {
@@ -21,6 +19,10 @@
         height: 50px;
         width: 100%;
         overflow: hidden;
+    }
+    #darkMode{
+      position:absolute;
+      top:100px;
     }
     body{
       overflow: hidden;
@@ -46,7 +48,6 @@
       }
 
     body {
-      padding: 25px;
       font-size: 25px;
       background-color: black;
       color: white;
@@ -100,74 +101,11 @@
     .dark-mode {
       background-color: white;
       color: black;
-
     }
-
-    /* 
-   .switch {
-  position: relative;
-  display: inline-block;
-  width: 10%;
-  height: 10%;
-}
-
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-*/
-    /* Rounded sliders */
-    /* .slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-   
-   .toggle_switch{
-   height:10%;
-   width:10%;
-   }    */
+    .white-mode {
+      background-color: black;
+      color: white;
+    }
 
   #socials {
     transform: translateX(230px);
@@ -176,6 +114,11 @@ input:checked + .slider:before {
     #socialstuff {
       margin: auto;
       width: 100%;
+    }
+
+    #socialIcons {
+      color: white;
+      margin-right:45px;
     }
 
     i {
@@ -217,34 +160,47 @@ input:checked + .slider:before {
     </div>
     <div id="socials">
       <p id=socialstuff>
-        <a href="https://www.linkedin.com/in/delzad-bamji/" style="color: white;margin-right:45px;">
+        <a href="https://www.linkedin.com/in/delzad-bamji/" id="socialIcons">
           <i class="fab fa-linkedin"></i>
         </a>
         &nbsp
-        <a href="https://www.facebook.com/delzad.bamji" style="color: white; margin-right:45px;">
+        <a href="https://www.facebook.com/delzad.bamji" id="socialIcons">
           <i class="fab fa-facebook"></i>
         </a>
         &nbsp
-        <a href="https://github.com/delzadbamji/" style="color: white;">
+        <a href="https://github.com/delzadbamji/" id="socialIcons">
           <i class="fab fa-github"></i>
         </a>
         &nbsp
       </p>
     </div>
   </div>
-  <!--
-      <div class="toggle_switch">
-      <label class="switch">
-      <input type="checkbox"  data-on="toggle dark mode" onclick="myFunction()" > 
-      <span class="slider round"></span>
-    </label>
-        </div> -->
-   <!-- <button  float=left>Toggle dark mode</button> -->
+  <i id="darkMode" class="fa fa-toggle-on" style="width:20px;" aria-hidden="true" onclick="myFunction(this)"></i>
+
 
   <script>
-    function myFunction() {
-      var element = document.body;
-      element.classList.toggle("dark-mode");
+    function myFunction(x) {
+      let body = document.body;
+      let allAnchors = document.getElementById("socialstuff").querySelectorAll("a");
+      if(x.classList.contains("fa-toggle-on")){
+        x.classList.toggle("fa-toggle-off");
+        x.classList.remove("fa-toggle-on");
+        body.classList.toggle("dark-mode");
+        body.classList.remove("white-mode");
+        toggleColor(allAnchors,"black");
+      }
+      else{
+        x.classList.toggle("fa-toggle-on");
+        x.classList.remove("fa-toggle-off");
+        body.classList.toggle("white-mode");
+        body.classList.remove("dark-mode");
+        toggleColor(allAnchors,"white");
+      }
+    }
+    function toggleColor(anchor,color) {
+      for (let index = 0; index < anchor.length; index++) {
+        anchor[index].style.color = color;
+        }
     }
   </script>
 </body>
