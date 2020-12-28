@@ -7,35 +7,43 @@
   <!--this is the dark mode and misc stuff -->
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
-  <!-- remember, jQuery is completely optional -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"
+    type="text/css">
   <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
   <script type="text/javascript" src="js/jquery.particleground.js"></script>
   <script type="text/javascript" src="js/demo.js"></script>
-  
-  
- <style> 
-body {
-  padding: 25px;
-   font-size: 25px;
-    background-color: black;
-  color: white;
-  width:100%;
-overflow:hidden;
-}
 
-.dark-mode {
-   background-color: white;
-  color: black;
+  <style>
+    body {
+      padding: 25px;
+      font-size: 25px;
+      background-color: black;
+      color: white;
+      width: 100%;
+      overflow: hidden;
+    }
 
-}
-   
-     <!-- this is the toogle switch stuff-->
-<!--
+    #container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 750px;
+      justify-items: center;
+      justify-content: center;
+    }
+
+    #profilePhoto {}
+
+    .dark-mode {
+      background-color: white;
+      color: black;
+
+    }
+
+    /* 
    .switch {
   position: relative;
   display: inline-block;
@@ -86,9 +94,9 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-
-/* Rounded sliders */
-.slider.round {
+*/
+    /* Rounded sliders */
+    /* .slider.round {
   border-radius: 34px;
 }
 
@@ -99,60 +107,75 @@ input:checked + .slider:before {
    .toggle_switch{
    height:10%;
    width:10%;
-   }   
-   -->
-   
-   #socialstuff{
-   margin:auto;
-   width:100%;  
-   }
-   #intro{
-   width:100%;
-     position:absolute;
-     top:14%
-   }
-</style>
+   }    */
+
+    #socialstuff {
+      margin: auto;
+      width: 100%;
+    }
+
+    #intro {
+      position: relative;
+      left: 36%;
+      width: 350px;
+    }
+  </style>
 </head>
 
 <body>
-  <a style="position:absolute; top:20px; right:20px;justify-content:flex-end;" href="https://delzadbamji.github.io/Delzad_Bamji_Resume.pdf" class="btn btn-info" role="button">Download Resume</a>
-<div id="particles">
-  <div id="intro">
-    <div style="justify-content:center;">
- 
-    <p><img src="https://delzadbamji.github.io/Delzad_Bamji_photo.JPG" alt="*if you see this, then your browser can't handle my photo. \n
-                                                Pretend that it's here*" style="margin-left:639px;"></p>
-   <p > <h2 style="margin-left:633px; "><u>Delzad Bamji</u></h2></p>
-
-      <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10; align:center;margin:auto;  margin-left:529px;">Software / Web Developer</h2>
-    <div>        <hr style="width: 50%; position:relative; right:3%; background-color: #E83951; border-color: #E83951;">
-</div>
-  <p id=socialstuff style="margin-left:589px;">
-  <a href="https://www.linkedin.com/in/delzad-bamji/" style="color: white;margin-right:45px;"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://www.facebook.com/delzad.bamji" style="color: white; margin-right:45px;"><i class="fab fa-facebook" style="font-size: 2em;"></i></a>
-    &nbsp
-    <a href="https://github.com/delzadbamji/" style="color: white;"><i class="fab fa-github" style="font-size: 2em;"></i></a>
-    &nbsp
-  </p>
+  <a style="position: fixed; top:20px; right:20px;justify-content:flex-end;"
+    href="https://delzadbamji.github.io/Delzad_Bamji_Resume.pdf" class="btn btn-info" role="button">
+    Download Resume
+  </a>
+  <div id="container">
+    <div id="intro">
+      <div id="centering" style="justify-content:center;">
+        <p>
+          <img src="https://delzadbamji.github.io/Delzad_Bamji_photo.JPG"
+            alt="if you see this, then your browser can't handle my photo. \n Pretend that it's here">
+        </p>
+        <p>
+        <h2 style="width: 190px;margin: 20px 20px 20px -4px;"><u>Delzad Bamji</u></h2>
+        </p>
+      </div>
+    </div>
+    <div id="jobTitle" style="transform: translateX(175px);">
+      <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10; width: 375px;margin: 20px 20px 20px 0px;">
+        Software / Web Developer
+      </h2>
+    </div>
+    <div id="horizontalLine">
+      <hr style="width: 720px; position:relative; background-color: #E83951; border-color: #E83951;">
+    </div>
+    <div id="socials" style="transform: translateX(230px);">
+      <p id=socialstuff>
+        <a href="https://www.linkedin.com/in/delzad-bamji/" style="color: white;margin-right:45px;"><i
+            class="fab fa-linkedin" style="font-size: 2em;"></i></a>
+        &nbsp
+        <a href="https://www.facebook.com/delzad.bamji" style="color: white; margin-right:45px;"><i
+            class="fab fa-facebook" style="font-size: 2em;"></i></a>
+        &nbsp
+        <a href="https://github.com/delzadbamji/" style="color: white;"><i class="fab fa-github"
+            style="font-size: 2em;"></i></a>
+        &nbsp
+      </p>
+    </div>
   </div>
-  </div>
-</div>
   <!--
-  <div class="toggle_switch">
-  <label class="switch">
-  <input type="checkbox"  data-on="toggle dark mode" onclick="myFunction()" > 
-  <span class="slider round"></span>
-</label>
-    </div> -->
-<!--  <button  float=left>Toggle dark mode</button> -->
+      <div class="toggle_switch">
+      <label class="switch">
+      <input type="checkbox"  data-on="toggle dark mode" onclick="myFunction()" > 
+      <span class="slider round"></span>
+    </label>
+        </div> -->
+  <!--  <button  float=left>Toggle dark mode</button> -->
 
-<script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-</script>
-    
+  <script>
+    function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
+
 </html>
