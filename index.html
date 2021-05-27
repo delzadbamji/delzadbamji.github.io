@@ -11,11 +11,22 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
     integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"
     type="text/css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
   <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
 
   <style>
     @media only screen and (max-width: 900px) {
     #resume {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+    }
+    #projects {
         height: 50px;
         width: 100%;
         overflow: hidden;
@@ -56,9 +67,9 @@
     }
 
     #resume{
-      position: fixed;
-      top:20px;
-      right:20px;
+      /* position: fixed; */
+      /* top:20px; */
+      /* right:20px; */
       justify-content:flex-end;
     }
 
@@ -145,10 +156,29 @@
 </head>
 
 <body>
+  <div class="row">
+    <div class="col-sm-9">
+      <i id="darkMode" class="fa fa-toggle-on" style="font-size: 45px;" aria-hidden="true" onclick="myFunction(this)"></i>
+    </div>
+    
+    <div class="col-sm-1">
+      <a id="projects"
+      href="https://github.com/delzadbamji/" style="width: 7.5em;" class="btn btn-success" role="button">
+      Projects
+    </a>    
+    </div>
+    
+
+    <div class="col-sm-1">
   <a id="resume"
     href="https://delzadbamji.github.io/Delzad_Bamji_Resume.pdf" download="Delzad_Bamji_Resume.pdf" class="btn btn-info" role="button">
     Download Resume
   </a>
+  </div>
+   
+  </div>
+
+
   <div id="container">
     <div id="intro">
       <div id="centering" style="justify-content:center;">
@@ -186,7 +216,7 @@
       </p>
     </div>
   </div>
-  <i id="darkMode" class="fa fa-toggle-on" style="position: fixed; top:28px;left:20px;" aria-hidden="true" onclick="myFunction(this)"></i>
+  <!-- <i id="darkMode" class="fa fa-toggle-on" style="position: fixed; top:28px;left:20px;" aria-hidden="true" onclick="myFunction(this)"></i> -->
   <footer id="email-footer"><strong>Reach out to me at: db3765 [at] rit [dot] edu </strong></footer>
 
 
