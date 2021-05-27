@@ -70,6 +70,7 @@
       /* position: fixed; */
       /* top:20px; */
       /* right:20px; */
+      margin:0px;
       justify-content:flex-end;
     }
 
@@ -77,6 +78,7 @@
       /* position: fixed; */
       /* top:20px; */
       /* right:20px; */
+      margin:0px;
       justify-content:flex-end;
     }
 
@@ -164,20 +166,21 @@
 
 <body>
   <div class="row">
-    <div class="col-sm-9">
+    <div class="col-sm-11 col-md-7 col-lg-9">
       <i id="darkMode" class="fa fa-toggle-on" style="font-size: 45px;" aria-hidden="true" onclick="myFunction(this)"></i>
     </div>
     
-    <div class="col-sm-1">
+    <div class="col-sm-11 col-md-2 col-lg-1">
       <a id="projects"
+      style="margin-right: 10px;"
       href="https://github.com/delzadbamji/" style="width: 7.5em; margin-right: 7px;" class="btn btn-success" role="button">
       Projects
     </a>    
     </div>
     
 
-    <div class="col-sm-1">
-  <a id="resume"
+    <div class="col-sm-11 col-md-2 col-lg-1">
+  <a id="resume" style="margin-left: 10px;"
     href="https://delzadbamji.github.io/Delzad_Bamji_Resume.pdf" download="Delzad_Bamji_Resume.pdf" class="btn btn-info" role="button">
     Download Resume
   </a>
@@ -187,21 +190,31 @@
 
 
   <div id="container">
+    <div class="row">
     <div id="intro">
       <div id="centering" style="justify-content:center;">
+          <div class="col-sm-11 col-md-4 col-lg-4 col-xl-2">
         <p>
           <img src="https://delzadbamji.github.io/Delzad_Bamji_photo.JPG"
             alt="if you see this, then your browser can't handle my photo. \n Pretend that it's here">
         </p>
+          </div>
+          <div class="col-sm-11 col-md-4 col-lg-4 col-xl-2"> 
         <p>
         <h2 id="name"><u>Delzad Bamji</u></h2>
         </p>
+        </div>  
+        </div>
       </div>
     </div>
+    <div class="row" style="display: flex; flex-direction: column; flex-flow: column; flex-wrap: wrap;">
+      <div class="col-sm-11 col-md-7 col-lg-6 col-xl-11">
     <div id="jobTitle">
-      <h2 class="jobHeading">
+      <h1 class="jobHeading">
         Software Developer | Web Developer
-      </h2>
+      </h1>
+    </div>
+    </div>
     </div>
     <div id="horizontalLine">
       <hr>
