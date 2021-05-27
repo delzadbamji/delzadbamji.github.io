@@ -1,175 +1,257 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    />
-
-    <!-- ------------------------------bootstrap -->
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <base target="_blank">
+  <meta charset="UTF-8" />
+  <title>Homepage of Delzad Bamji</title>
+  <!--this is the dark mode and misc stuff -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"
+    type="text/css">
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <!-- ---------------------------------------- -->
-    <!-- --------------------my styles---------- -->
-    <link rel="stylesheet" href="styles.css" />
+  <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script>
 
-    <link
-      rel="icon"
-      href="E:\ms-event-test\public\favicon.ico"
-      type="image/gif"
-      sizes="16x16"
-    />
-    <!-- ----------------------------------- -->
+  <style>
+    @media only screen and (max-width: 900px) {
+    #resume {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+    }
+    #projects {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+    }
+    #darkMode{
+      position:absolute;
+      top:100px;
+    }
+    body{
+      overflow: hidden;
+    }
+    }
+    @media only screen and (min-width: 300px) and (max-width: 512px) {
+      body{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+      }
+      #container {
+        left:33%;
+        top: 40%;
+        overflow:hidden;
+      }
 
-    <!-- github -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-      type="text/css"
-    />
+      #intro {
+        justify-items: center;
+        justify-content: center;
+      }
+      }
 
-    <!-- new fab fa -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-      type="text
-      /css"
-    />
-    <!-- --------------------- -->
-  </head>
-  <body>
-    <div>
-      <div class="row">
-        <div class="col-sm-6" style="height: 50px"></div>
-      </div>
+    body {
+      font-size: 25px;
+      background-color: black;
+      color: #0ff;
+      width: 100%;
+      overflow: hidden;
+    }
 
-      <div class="row">
-        <div class="col-sm-7" style="margin-left: 20px">
-          <i
-            id="darkMode"
-            class="fa fa-toggle-off"
-            aria-hidden="true"
-            style="font-size: 45px"
-            title="toggle lights"
-            onclick="setNight(this)"
-          ></i>
-        </div>
+    #resume{
+      /* position: fixed; */
+      /* top:20px; */
+      /* right:20px; */
+      justify-content:flex-end;
+    }
 
-        <div class="col-sm-3"></div>
+    #projects{
+      /* position: fixed; */
+      /* top:20px; */
+      /* right:20px; */
+      justify-content:flex-end;
+    }
 
-        <div class="col-sm-1" style="margin-left: 85px">
-          <a
-            class="btn btn-info"
-            style="color: #ffff; float: right; margin-left: 20px"
-            href="public/resume.txt"
-            target="_blank"
-            title="resume"
-            >Download Resume</a
-          >
-        </div>
-      </div>
+    #container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 750px;
+      justify-items: center;
+      justify-content: center;
+    }
 
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-3 get-center">
-            <img
-              src="public/jillDoe.jpg"
-              alt="user"
-              title="my photo"
-              class="photo"
-            />
-          </div>
-        </div>
+    #intro {
+      position: relative;
+      left: 36%;
+      width: 350px;
+    }
 
-        <div class="row">
-          <div class="col-sm-3 get-name-center">
-            <h1 title="Jill Doe's page" style="margin: 25px; padding: 15px">
-              Jill Doe
-            </h1>
-          </div>
-        </div>
+    #name {
+      width: 190px;
+      margin: 20px 0px 20px -4px;
+    }
+    
+    #jobTitle {
+      transform: translateX(101px);
+      /* width: 375px; */
+      margin: 20px 0px;
+    }
+    .jobHeading{
+        font-family: 'Syncopate', sans-serif; 
+        font-weight: 500;
+    }
 
-        <div class="row">
-          <div class="col-sm-3 get-title-center">
-            <h1 title="Jill Doe is a role model">Role Model</h1>
-          </div>
-        </div>
+    #horizontalLine {
+      width: 715px; 
+      position:relative;
+    }
 
-        <div class="row">
-          <div class="col-sm-9 line-container">
-            <hr class="line" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-sm-3 socialMedia-container">
-            <i
-              id="socialMedia"
-              title="twitter"
-              class="fab fa-twitter socialMedia"
-            ></i>
-            <i
-              id="socialMedia"
-              title="GitHub"
-              class="fab fa-github socialMedia"
-            ></i>
-            <i
-              id="socialMedia"
-              title="Instagram"
-              class="fab fa-instagram socialMedia"
-            ></i>
-            <i
-              id="socialMedia"
-              title="Facebook"
-              class="fab fa-facebook socialMedia"
-            ></i>
-          </div>
-        </div>
-        <div class="row">
-          <div
-            class="col-sm-3"
-            style="position: absolute; bottom: 2%; left: 44%"
-          >
-            <footer><strong> jill.doe@gmail.com</strong></footer>
-          </div>
-        </div>
-      </div>
-      <script type="text/javascript" src="index.js"></script>
+    .dark-mode {
+      background-color: white;
+      color: black;
+    }
+    .white-mode {
+      background-color: black;
+      color: #0ff;
+    }
+
+  #socials {
+    transform: translateX(230px);
+  }
+    
+    #socialstuff {
+      margin: auto;
+      width: 100%;
+    }
+
+    #socialIcons {
+      color: #0ff;
+      margin-right:45px;
+    }
+
+    i {
+      font-size: 2em;
+    }
+
+    hr {
+      background-color: #E83951;
+      border-color: #E83951;
+    }
+  
+    #email-footer{
+    background: transparent;
+    position: absolute;
+    width: 345px;
+    transform: translate(-50%,-50%);
+    bottom: 2px;
+    font-size: 15px;
+    right: 50%;
+    left: 50%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-sm-9">
+      <i id="darkMode" class="fa fa-toggle-on" style="font-size: 45px;" aria-hidden="true" onclick="myFunction(this)"></i>
     </div>
-  </body>
+    
+    <div class="col-sm-1">
+      <a id="projects"
+      href="https://github.com/delzadbamji/" style="width: 7.5em; margin-right: 7px;" class="btn btn-success" role="button">
+      Projects
+    </a>    
+    </div>
+    
+
+    <div class="col-sm-1">
+  <a id="resume"
+    href="https://delzadbamji.github.io/Delzad_Bamji_Resume.pdf" download="Delzad_Bamji_Resume.pdf" class="btn btn-info" role="button">
+    Download Resume
+  </a>
+  </div>
+   
+  </div>
+
+
+  <div id="container">
+    <div id="intro">
+      <div id="centering" style="justify-content:center;">
+        <p>
+          <img src="https://delzadbamji.github.io/Delzad_Bamji_photo.JPG"
+            alt="if you see this, then your browser can't handle my photo. \n Pretend that it's here">
+        </p>
+        <p>
+        <h2 id="name"><u>Delzad Bamji</u></h2>
+        </p>
+      </div>
+    </div>
+    <div id="jobTitle">
+      <h2 class="jobHeading">
+        Software Developer | Web Developer
+      </h2>
+    </div>
+    <div id="horizontalLine">
+      <hr>
+    </div>
+    <div id="socials">
+      <p id=socialstuff>
+        <a href="https://www.linkedin.com/in/delzad-bamji/" id="socialIcons">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        &nbsp
+        <a href="https://www.facebook.com/delzad.bamji" id="socialIcons">
+          <i class="fab fa-facebook"></i>
+        </a>
+        &nbsp
+        <a href="https://github.com/delzadbamji/" id="socialIcons">
+          <i class="fab fa-github"></i>
+        </a>
+        &nbsp
+      </p>
+    </div>
+  </div>
+  <!-- <i id="darkMode" class="fa fa-toggle-on" style="position: fixed; top:28px;left:20px;" aria-hidden="true" onclick="myFunction(this)"></i> -->
+  <footer id="email-footer"><strong>Reach out to me at: db3765 [at] rit [dot] edu </strong></footer>
+
+
+  <script>
+    function myFunction(x) {
+      let body = document.body;
+      let allAnchors = document.getElementById("socialstuff").querySelectorAll("a");
+      if(x.classList.contains("fa-toggle-on")){
+        x.classList.toggle("fa-toggle-off");
+        x.classList.remove("fa-toggle-on");
+        body.classList.toggle("dark-mode");
+        body.classList.remove("white-mode");
+        toggleColor(allAnchors,"black");
+      }
+      else{
+        x.classList.toggle("fa-toggle-on");
+        x.classList.remove("fa-toggle-off");
+        body.classList.toggle("white-mode");
+        body.classList.remove("dark-mode");
+        toggleColor(allAnchors,"#0ff");
+      }
+    }
+    function toggleColor(anchor,color) {
+      for (let index = 0; index < anchor.length; index++) {
+        anchor[index].style.color = color;
+        }
+    }
+  </script>
+</body>
+
 </html>
